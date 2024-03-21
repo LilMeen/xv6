@@ -5,7 +5,7 @@ Answer: 7
 3. What was the previous mode that the CPU was in?
 Answer: user mode
 4. Write down the assembly instruction the kernel is panicing at. Which register corresponds to the variable num?
-Answer: 0x0000000080002050, $a3
+Answer: 0x00000000800020d4, $s2
 5. Why does the kernel crash? Hint: look at figure 3-3 in the text; is address 0 mapped in the kernel address space? Is that confirmed by the value in scause above? (See description of scause in RISC-V privileged instructions)
 Answer: a load page fault (code 13), address 0 didn't mapped in the kernel address space. It is confirmed by the value in scause above.
 6. What is the name of the binary that was running when the kernel paniced? What is its process id (pid)?
