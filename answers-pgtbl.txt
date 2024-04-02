@@ -1,2 +1,4 @@
 1. Which other xv6 system call(s) could be made faster using this shared page? Explain how.
 Answer: Because of saving time on copying data, any system call that invokes the copyout function will be made faster (directly or indirectly allowed). Moreover, which one used for retrieving data will also be faster. Due to the corresponding data can be read in usermode since the operation of trapping into the operating system is not necessary.
+2. Explain the output of vmprint in terms of Fig 3-4 from the text. What does page 0 contain? What is in page 2? When running in user mode, could the process read/write the memory mapped by page 1? What does the third to last page contain?
+Answer: Page 0 maps the 'load program into memory' in exec, so it contains data and text, page2 contains the process's stack, can't read/write the memory mapped by page1 because it contains the guard page, the third to last pages contains the heap.
